@@ -1,7 +1,49 @@
 /*-----------------------------------*\
   #C-NAV
 \*-----------------------------------*/
+.c-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    z-index: 999;
+}
 
+.c-nav__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    transform: translateY(-100vh);
+    background-color: red;
+    transition: ease 250ms;
+    z-index: -1;
+}
+
+.l-header.is-active .c-nav__menu {
+    transform: translateY(0);
+}
+
+/*CONTINUAR AQUI O MENU DO MOBILE E PROCEGUIR EM CRIAR O HEADER TOTAL DO DESKTOP*/
+
+.c-nav__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-nav__close {
+    display: none;
+}
+
+.l-header.is-active .c-nav__close {
+    display: block;
+}
+
+.l-header.is-active .c-nav__hamb {
+    display: none;
+}
 
 
 /*-----------------------------------*\
