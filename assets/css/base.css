@@ -45,8 +45,8 @@
 
     /* Font Families */
 
-    --ff-body: 'DM Serif Display', serif;;
-    --ff-title: 'Karla', sans-serif;
+    --ff-body: 'Karla', sans-serif;
+    --ff-title: 'DM Serif Display', serif;
 
 
     /* Font Sizes */
@@ -100,6 +100,7 @@ a {
     background: none;
     border: none;
     font: inherit;
+    color: inherit;
 }
 
 
@@ -122,12 +123,16 @@ p {
     font-family: var(--ff-body);
     font-weight: 400;
     line-height: 2.6rem;
+    font-size: var(--normal-fs);
+    line-height: 2.6rem;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: var(--ff-title);
+    font-weight: 400;
 }
 
 html {
@@ -140,8 +145,6 @@ body {
     font-size: var(--normal-fs);
     font-family: var(--ff-body);
     overflow-x: hidden;
-    min-height: 100vh;
-    background-color: grey;
 }
 
 

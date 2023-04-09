@@ -1,3 +1,4 @@
+
 /*-----------------------------------*\
   #C-NAV
 \*-----------------------------------*/
@@ -6,52 +7,320 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    z-index: 999;
 }
 
-.c-nav__menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 8rem);
-    transform: translateY(-100vh);
-    background-color: red;
-    transition: ease 250ms;
-    z-index: -1;
+@media (max-width: 756px){
+    .c-nav__menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 8rem);
+        transform: translateY(-101vh);
+        background-color: var(--neutral1);
+        transition: ease 250ms;
+        color: var(--neutral3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+        padding: 4rem 2.4rem 0;
+        font-size: var(--bigger-x1-fs);
+    }
+    .c-nav__item {
+        width: 100%;
+        text-align: center;
+    }
+    .c-nav__link {
+        padding: 0.8rem;
+        width: 100%;
+        display: block;
+        font-size: inherit !important;
+        color: var(--neutral3) !important;
+    }
+    .c-nav__menu .o-button {
+        width: 100%;
+        padding-block: 1.85rem;
+        font-size: inherit;
+        border: solid var(--neutral3) 0.2rem;
+        color: var(--neutral3);
+        
+    }
+    .c-nav__bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    .l-header.is-active .c-nav__menu {
+        transform: translateY(0);
+    }
+    .c-nav__toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .c-nav__close {
+        display: none;
+    }
+    
+    .l-header.is-active .c-nav__close {
+        display: block;
+    }
+    
+    .l-header.is-active .c-nav__hamb {
+        display: none;
+    }
 }
 
-.l-header.is-active .c-nav__menu {
-    transform: translateY(0);
+@media (min-width: 756px) {
+    .c-nav__bg {
+        display: none;
+    }
+    .c-nav__toggle {
+        display: none;
+    }
+    .c-nav__menu {
+        display: flex;
+        gap: 2.6rem;
+        transform: translateX(2.6rem);
+    }
+    .c-nav__item {
+        display: flex;
+        align-items: center;
+    }
+    /* .c-nav__link {
+       cursor: pointer; 
+    } */
+    .c-nav__item:nth-child(3) {
+        margin-right: 0.7rem;
+    }
+    .c-nav__menu .o-button {
+        padding: 1.3rem 2.8rem;
+    }
 }
 
-/*CONTINUAR AQUI O MENU DO MOBILE E PROCEGUIR EM CRIAR O HEADER TOTAL DO DESKTOP*/
 
-.c-nav__toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.c-nav__close {
-    display: none;
-}
-
-.l-header.is-active .c-nav__close {
-    display: block;
-}
-
-.l-header.is-active .c-nav__hamb {
-    display: none;
-}
 
 
 /*-----------------------------------*\
   #O-TEXT
 \*-----------------------------------*/
+.o-link {
+    font-size: var(--smaller-x1-fs);
+    cursor: pointer; 
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    line-height: 1.5rem;
+    color: var(--neutral1);
+}
 
 
 
 /*-----------------------------------*\
   #O-BUTTON
 \*-----------------------------------*/
+.o-button {
+    border: solid var(--neutral1) 0.2rem;
+    font-size: var(--smaller-x1-fs);
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    line-height: 1.5rem;
+    color: var(--neutral1);
+    transition: ease 250ms;
+    position: relative;
+    z-index: 10;
+}
+
+.o-button:hover {
+    background-color: var(--neutral1);
+    color: var(--neutral3);
+}
+
+/*-----------------------------------*\
+  #O-BAR
+\*-----------------------------------*/
+.o-bar {
+    background-color: var(--neutral3);
+    width: 15rem;
+    height: 0.2rem;
+}
+
+
+/*-----------------------------------*\
+  #O-MAIN-TITLE
+\*-----------------------------------*/
+.o-main-title {
+    font-size: var(--bigger-x4-fs);
+    line-height: 4.8rem;
+}
+@media (min-width: 756px) {
+    .o-main-title {
+        line-height: 6.4rem;
+    }
+}
+
+
+/*-----------------------------------*\
+  #HOME-SECTION
+\*-----------------------------------*/
+/*ainda falta acertar a imagem principal, e colocar o botão com z indez maior que a imagem do picutre*/
+.c-home__img {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+@media (min-width: 756px) {
+    .c-home__img {
+        /* position: absolute;
+        top: 10.5rem; */
+        max-width: 54rem;
+        grid-area: img;
+        transform: translateY(10.5rem);
+        z-index: 0;
+    }
+}
+
+.c-home__bg-right {
+    position: absolute;
+    bottom: -17.5rem;
+    right: 0;
+}
+@media (min-width: 756px) {
+    .c-home__bg-right {
+        top: 0;
+        right: 0;
+    }
+}
+
+.c-home__bg-left {
+    position: absolute;
+    bottom: 40rem;
+    left: 0;
+}
+@media (min-width: 756px) {
+    .c-home__bg-left {
+        top: 45rem;
+        left: 0;
+    }
+}
+
+.l-home .o-bar {
+    display: none;
+}
+
+.c-home__title {
+    margin-bottom: 1.6rem;
+}
+@media (min-width: 756px) {
+    .c-home__title {
+        font-size: 5.6rem;
+    }
+}
+@media (min-width: 1100px) {
+    .c-home__title {
+        font-size: 7.2rem;
+    }
+}
+
+
+.c-home__desc {
+    margin-bottom: 3.2rem;
+}
+
+.l-home .o-button {
+    border: solid var(--neutral3) 0.2rem;
+    color: var(--neutral3);
+    padding: 1.2rem 2.8rem;
+}
+.o-button:hover {
+    background-color: var(--neutral3);
+    color: var(--neutral1);
+}
+
+/*-----------------------------------*\
+  #WORK-SECTION
+\*-----------------------------------*/
+.c-work .o-bar {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    background-color: #C396C6;
+}
+@media (min-width: 756px) {
+    .c-work .o-bar {
+        margin: 0 0 6.3rem 0;
+    }
+}
+
+.c-work .o-main-title {
+    margin-bottom: 8rem;
+}
+
+.c-work__cards {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5.2rem;
+    align-items: center;
+}
+@media (min-width: 756px) {
+    .c-work__cards {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+
+.c-work__card {
+    max-width: 35rem;
+}
+@media (min-width: 756px) {
+    .c-work__card {
+        max-width: 35rem;
+        text-align: left;
+    }
+}
+
+.c-work__img {
+    margin-bottom: 3.2rem;
+}
+
+.c-work__card-title {
+    margin-bottom: 1.6rem;
+    font-size: var(--bigger-x2-fs);
+    line-height: 3.8rem;
+}
+
+.c-work__desc {
+    color: var(--neutral2);
+}
+
+
+/*-----------------------------------*\
+  #MORE-SECTION
+\*-----------------------------------*/
+.c-more {
+    background-color: var(--color1);
+    text-align: center;
+    padding: 7.2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.c-more__title {
+    color: var(--neutral3);
+    font-size: var(--bigger-x3-fs);
+    line-height: 4rem;
+}
+
+.c-more .o-button {
+    background-color: transparent;
+    color: var(--neutral3);
+    border-color: var(--neutral3);
+    padding: 1.3rem 2.5rem;
+    
+}

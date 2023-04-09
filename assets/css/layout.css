@@ -4,8 +4,7 @@
 .l-header {
     height: 8rem;
     position: relative;
-    background-color: green;
-    z-index: 999;
+    background-color: #FFF;
 }
 
 
@@ -19,7 +18,6 @@
     padding-inline: 2.4rem;
     margin-inline: auto;
     height: 100%;
-    z-index: 999;
 }
 @media (min-width: 1100px) {
     .l-container {
@@ -27,19 +25,64 @@
     }
 }
 
-
+/*-----------------------------------*\
+  #MAIN
+\*-----------------------------------*/
 
 
 /*-----------------------------------*\
   #HOME
 \*-----------------------------------*/
+.l-home {
+    position: relative;
+    background-color: var(--color1);
+    /* display: flex; */
+    margin-bottom: 14rem;
+}
+@media (min-width: 756px) {
+    .l-home {
+        height: 60rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'content img';
+        margin-bottom: 30rem;
+    }
+}
+
+.l-home .l-container {
+    padding-block: 9.3rem;
+    color: var(--neutral3);
+    text-align: center;
+    grid-area: content;
+    margin-inline: auto 0;
+}
+@media (min-width: 756px) {
+    .l-home .l-container {
+        max-width: 55rem;
+        text-align: start;
+    }
+}
 
 
+/*-----------------------------------*\
+  #SECTION
+\*-----------------------------------*/
+.l-section {
+    margin-bottom: 15rem;
+}
 
 /*-----------------------------------*\
   #WORK
 \*-----------------------------------*/
-
+.l-work {
+    text-align: center;
+}
+@media (min-width: 756px) {
+    .l-work {
+        text-align: start;
+    }
+}
 
 
 /*-----------------------------------*\
