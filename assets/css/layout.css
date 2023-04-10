@@ -94,3 +94,13 @@
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
+.l-footer {
+    padding: 8.8rem 0;
+    background-color: var(--neutral3);
+    position: relative;
+}
+@media (min-width: 756px) {
+    .l-footer {
+        padding: 6.4rem 0;
+    }
+}

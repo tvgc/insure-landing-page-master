@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   
   <title>Frontend Mentor | Insure landing page</title>
 
@@ -17,6 +19,7 @@
   </style>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="l-header js-header ">
     <div class="l-container">
       <nav class="c-nav">
@@ -125,54 +128,97 @@
     <section class="l-section l-more">
       <div class="l-container">
         <div class="c-more">
-          <h4 class="c-more__title">Find out more <br> about how we work</h4>
+          <div class="c-more__content">
+            <h4 class="c-more__title">Find out more <br> about how we work</h4>
 
-          <button class="o-button">How we work</button>
+            <button class="o-button">How we work</button>
+          </div>
+
+          <picture>
+            <source media="(max-width: 756px)" srcset="assets/images/bg-pattern-how-we-work-mobile.svg">
+            <source media="(min-width: 757px)" srcset="assets/images/bg-pattern-how-we-work-desktop.svg">
+
+            <img class="c-more__bg" src="assets/images/bg-pattern-how-we-work-mobile.svg" alt="">
+          </picture>
         </div>
       </div>
     </section>
   </main>
 
+  <footer class="l-footer">
+    <div class="l-container">
+      <div class="c-footer__box">
+        <img src="assets/images/logo.svg" alt="Logo" class="o-logo">
+
+        <div class="c-footer__medias">
+          <div class="c-footer__media">
+            <i class='bx bxl-facebook-square'></i>
+          </div>
+          <div class="c-footer__media">
+            <i class='bx bxl-twitter' ></i>
+          </div>
+          <div class="c-footer__media">
+            <i class='bx bxl-pinterest' ></i>
+          </div>
+          <div class="c-footer__media">
+            <i class='bx bxl-instagram' ></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-footer__links-box">
+        <div class="c-footer__links">
+          <p class="o-link">Our company</p>
+          <a href="#" class="o-link">How we work</a>
+          <a href="#" class="o-link">Why Insure?</a>
+          <a href="#" class="o-link">View plans</a>
+          <a href="#" class="o-link">Reviews</a>
+        </div>
+
+        <div class="c-footer__links">
+          <p class="o-link">Help me</p>
+          <a href="#" class="o-link">FAQ</a>
+          <a href="#" class="o-link">Terms of use</a>
+          <a href="#" class="o-link">Privacy policy</a>
+          <a href="#" class="o-link">Cookies</a>
+        </div>
+
+        <div class="c-footer__links">
+          <p class="o-link">Contact</p>
+          <a href="#" class="o-link">Sales</a>
+          <a href="#" class="o-link">Support</a>
+          <a href="#" class="o-link">Live chat</a>
+          <a href="#" class="o-link"></a>
+        </div>
+
+        <div class="c-footer__links">
+          <p class="o-link">Others</p>
+          <a href="#" class="o-link">Careers</a>
+          <a href="#" class="o-link">Press</a>
+          <a href="#" class="o-link">Licenses</a>
+          <a href="#" class="o-link"></a>
+        </div>
+      </div>
+    </div>
+
+    <picture>
+      <source media="(max-width: 756px)" srcset="assets/images/bg-pattern-footer-mobile.svg">
+      <source media="(min-width: 757px)" srcset="assets/images/bg-pattern-footer-desktop.svg">
+
+      <img class="c-footer__bg" src="assets/images/bg-pattern-footer-mobile.svg" alt="">
+    </picture>
+  </footer>
+
   
   
   <script src="assets/js/main.js"></script>
   
+ 
 
   
-
-
-  
-
-  Our company
-
-  How we work
-  Why Insure?
-  View plans
-  Reviews
-
-  Help me
-
-  FAQ
-  Terms of use
-  Privacy policy
-  Cookies
-
-  Contact
-
-  Sales
-  Support
-  Live chat
-
-  Others
-
-  Careers
-  Press
-  Licenses
-
-  
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Your Name Here</a>. -->
   </div>
 </body>
 </html>

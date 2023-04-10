@@ -5,5 +5,3 @@ const toggleMenu = document.querySelector('.js-toggle-menu')
 toggleMenu.addEventListener('click', e => {
     header.classList.toggle('is-active')
 })
-
-console.log('teste');

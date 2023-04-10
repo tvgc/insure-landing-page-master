@@ -26,6 +26,7 @@
         gap: 2.4rem;
         padding: 4rem 2.4rem 0;
         font-size: var(--bigger-x1-fs);
+        z-index: 2;
     }
     .c-nav__item {
         width: 100%;
@@ -98,14 +99,17 @@
     .c-nav__menu .o-button {
         padding: 1.3rem 2.8rem;
     }
+    .c-nav__menu .o-button:hover {
+        background-color: var(--neutral1);
+        color: var(--neutral3);
+    }
 }
 
 
 
 
-
 /*-----------------------------------*\
-  #O-TEXT
+  #O-LINK
 \*-----------------------------------*/
 .o-link {
     font-size: var(--smaller-x1-fs);
@@ -303,6 +307,11 @@
   #MORE-SECTION
 \*-----------------------------------*/
 .c-more {
+    position: relative;
+    overflow: hidden;
+}
+
+.c-more__content {
     background-color: var(--color1);
     text-align: center;
     padding: 7.2rem 2.4rem;
@@ -310,11 +319,20 @@
     flex-direction: column;
     gap: 4rem;
 }
+@media (min-width: 756px) {
+    .c-more__content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: start;
+        height: 25rem;
+    }
+}
 
 .c-more__title {
     color: var(--neutral3);
     font-size: var(--bigger-x3-fs);
     line-height: 4rem;
+    z-index: 1;
 }
 
 .c-more .o-button {
@@ -322,5 +340,112 @@
     color: var(--neutral3);
     border-color: var(--neutral3);
     padding: 1.3rem 2.5rem;
-    
+    margin: 0 auto;
 }
+@media (min-width: 756px) {
+    .c-more .o-button {
+        margin: auto 0;
+    }
+}
+
+.c-more .o-button:hover {
+    background-color: var(--neutral3);
+    color: var(--neutral1);
+    border-color: var(--neutral3);
+}
+
+.c-more__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+.c-footer__box {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+    border-bottom: solid hsla(0, 0%, 86%, 1) 0.1rem;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+}
+@media (min-width: 756px) {
+    .c-footer__box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 3.3rem;
+    }
+}
+
+.l-footer .o-logo {    
+    z-index: 2;
+}
+
+
+.c-footer__medias {
+    display: flex;
+    gap: 1.6rem;    
+    z-index: 2;
+}
+
+.c-footer__media {
+    display: flex;
+    font-size: 2.4rem;
+    color: var(--neutral2);
+    cursor: pointer;
+}
+
+.c-footer__media i {
+    transition-duration: 250ms;
+}
+
+.c-footer__media i:hover {
+    color: var(--neutral1);
+}
+
+.c-footer__links-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+@media (min-width: 756px) {
+    .c-footer__links-box {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.c-footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;    
+    z-index: 2;
+}
+@media (min-width: 756px) {
+    .c-footer__links {
+        width: 25.5rem;
+        align-items: flex-start;
+    }
+}
+
+.l-footer .o-link:first-child {
+    margin-bottom: 2rem;
+    color: var(--neutral2);
+    cursor: default;
+}
+
+
+.c-footer__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/*prozimos passos: verificar uma forma de tirar o ultimo gap da sessão more. talvez criar outra tag dentro cmore e isolar ele.*/
